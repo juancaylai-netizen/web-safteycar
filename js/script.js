@@ -1,4 +1,5 @@
-const URL_BASE = `https://api.nhtsa.gov/SafetyRatings`; 
+const URL_BASE = `https://api.nhtsa.gov/SafetyRatings`;
+const IMG_PLACEHOLDER = `img/logo.jpg`;
 
 // Variables para almacenar los elementos del DOM
 let YEAR_SELECT = document.getElementById("year");
