@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--<link rel="stylesheet" href="/src/styles/index.css">
+    <link rel="stylesheet" href="/src/styles/fonts.css">-->
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="shortcut icon" href="/img/logo.jpg" type="image/x-icon">
+    <title>HowSafeIsMyCar?</title>
+</head>
+<body>
+    <!--encabezado-->
+    <header class="barra">
+        <div class="texto-barra">
+            <div><img class="logo encabezado--item" src="img/logo.jpg" alt="HowSafeIsMyCar?"></div>
+            <div><h2 class="titulo_principal encabezado--item">
+                <span class="mitad_uno">Is My</span><span class="mitad_dos">Car Safe</span><span class="mitad_tres">?</span>
+                </h2></div>
+            <div>
+                <h2 class="descripcion_barra encabezado--item">
+                Calificaciones basadas en las<br>pruebas de seguridad de la:<span class="NHTSA encabezado--item">NHTSA</span>
+                </h2>
+            </div>
+        </div>
+    </header>
+    <main> 
+        <div id="contenedor">
+            <div id="titulo_y_listas">
+                <h1>Probá el <span id="choque">choque</span><br>antes de comprarlo.</h1>
+                <p id="descripcion_titulo">Podrás ver los siguientes parámetros de seguridad en choques: <br><span>frontal</span>, <span>lateral</span> y <span>vuelco</span>.</p>
+                
+            <!--listas-->
+                <div class="listas">
+                    <select class="selecciones año--item" name="year" id="year">
+                        <option value="">Seleccione año</option>
+                    </select>   
+                    <select class="selecciones marca_auto--item" name="maker" id="marca_auto">
+                        <option value="">Seleccione marca</option>
+                    </select>
+                    <select class="selecciones modelo_auto--item" name="model" id="modelo_auto">
+                        <option value="">Seleccione modelo</option>
+                    </select>
+                    <select class="selecciones version_auto--item" name="version" id="version_auto">
+                        <option value="">Seleccione versión</option>
+                    </select>
+                </div>
+                
+                <!--Informacion del auto seleccionado-->
+                <div class="info_auto">
+                    <div id="bloque_leyenda_auto" class="leyenda-auto">
+                    <span class="sub-leyenda">Resultados de seguridad para:</span>
+                        <h2 id="texto_auto_seleccionado"></h2>
+                    </div>
+                </div>
+            </div>
+            <!--resultados de la api-->
+            <div id="Resultados" class="info_autos">
+                <article class="contenedor_tarjetas">
+                    <!--imagenes-->
+                    <div class="tarjeta">
+                        <img id="img_frontal" src="" alt="imagen_1" class="imagen">
+                        <hr>
+                        <!--rating imagen 1-->
+                        <div class="estrellas_frente">
+                            <span id="raiting-frente" class="frente-1">Impacto Frontal:</span>
+                            <h3 id="h3-var"><div id="rating_frente" class="frente-1"></div></h3>
+                            
+                            <span id="raiting-conductor" class="frente-2">Impacto Frontal Conductor:</span>
+                            <h3 id="h3-var"><div id="rating_conductor" class="frente-2"></div></h3>
+                            
+                            <span id="raiting-pasajero" class="frente-3">Impacto Frontal Pasajero</span>
+                            <h3 id="h3-var"><div id="rating_pasajero" class="frente-3"></div></h3>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta">
+                        <img id="img_lateral" src="" alt="imagen_2" class="imagen">
+                        <!--rating imagen 2-->
+                        <hr>
+                        <div class="estrellas_lateral">
+                            <span id="raiting-lateral" class="lateral">Impacto Lateral</span>
+                            <h3 id="h3-var"><div id="rating_lateral" class="lateral_contenedor"></div></h3>
+                            <span id="raiting-conductor-lateral" class="conductor_lateral">Impacto Lateral conductor</span>
+                            <h3 id="h3-var"><div id="rating_conductor_lateral" class="conductor_lateral_contenedor"></div></h3>
+                            <span id="raiting-pasajero-lateral" class="pasajero_lateral">Impacto Lateral Pasajero</span>
+                            <h3 id="h3-var"><div id="rating_pasajero_lateral" class="pasajero_lateral_contenedor"></div></h3>
+                        </div>
+                    </div>
+                    
+                    <div class="tarjeta">
+                        <img id="img_poste" src="" alt="imagen_3" class="imagen">
+                        <hr>
+                        <!--rating imagen 3-->
+                        <div class="estrellas_poste">
+                            <span id="raiting-poste" class="poste">Impacto contra poste vertical:</span>
+                            <h3 id="h3-var"><div id="rating_poste" class="poste_contenedor"></div></h3>
+                            <span id="raiting-vuelco" class="vuelco">Valoracion Riesgo de vuelco:</span>
+                            <h3 id="h3-var"><div id="rating_vuelco" class="vuelco_contenedor"></div></h3>
+                            <span id="raiting-probabilidad" class="probabilidad">Porcentaje: </span>
+                            <h3 id="h3-var"><div id="rating_probabilidad" class="probabilidad_contenedor"></div></h3>
+                        </div>
+                    </div>
+                    </div>
+                </article>
+                
+            </div>
+        </div>
+    </main>
+    <footer>
+            <div class="footer_link_github">
+                <a href="https://github.com/FragaUB/HowSafeIsMyCar/tree/main" target="_blank">
+                    <img class="github" src="img/github.jpg" alt="github_repo">
+                </a>
+            </div>
+    </footer>
+    
+    <span style="display: none;">Resultados JSON de la petición completa</span>
+    <span style="display: none;" id="resultados"></span>
+    <script src="api/script.js"></script>
+</body>
+</html>

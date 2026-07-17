@@ -1,0 +1,41 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url(fuentes/montserrat/Montserrat-Light.ttf) format(truetype);   
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(fuentes/montserrat/Montserrat-Regular.ttf) format(truetype);   
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(fuentes/montserrat/Montserrat-SemiBold.ttf) format(truetype);   
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(fuentes/montserrat/Montserrat-Bold.ttf) format(truetype);   
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: "Antipasto";
+    src: url(fuentes/antipasto/Antipasto-Pro-ExtraLight-trial.ttf) format(truetype);   
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: "Antipasto";
+    src: url(fuentes/antipasto/Antipasto-Pro-Regular-trial.ttf) format(truetype);   
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Antipasto";
+    src: url(fuentes/antipasto/Antipasto-Pro-ExtraBold-trial.ttf) format(truetype);   
+    font-weight: 900;
+}
